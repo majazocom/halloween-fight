@@ -1,39 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body {
     margin: 0;
+    color: #dad9d9;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+.background {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    padding-top:26vh;
     background-image:url('halloween.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #dad9d9;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-left: 10%;
-    padding-right: 10%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    position: fixed;
+    z-index: -1;
 }
-header, footer {
-    background-color: rgba(0, 0, 0, 0.719);
+footer {background-color: rgb(2 10 19);
     width: 100%;
     text-align: center;
 }
 main {
-    background-color: rgba(0, 0, 0, 0.719);
+    margin-top: 100vh;
+    background-color: rgb(2 10 19);
     display: flex;
     width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
     padding-bottom: 5rem;
+    text-align: center;
 }
 
 h1 {
     font-family: 'Syne Tactile', cursive;
     font-size: 68px;
+    color: #182b3f;
+    text-shadow: 2px 2px #c75f1a;
+}
+
+h3 {
+    text-shadow: 2px 2px #c75f1a;
+    font-size: 26px;
+}
+
+h4 {
+    font-size: 22px;
 }
 
 ul {
@@ -43,6 +66,8 @@ ul {
 
 li {
     padding-top: 0.5rem;
+    color: rgb(2 10 19);
+    font-weight: bold;
 }
 
 #spook-list li, #my-team li {
@@ -51,41 +76,48 @@ li {
     padding: 0.5rem 2rem;
     text-align: center;
     border-radius: 12px;
-    background-color: #712352;
+    background-color: #fe8232;
     transition: all 0.3s;
 }
 
 #spook-list li:hover {
     cursor: pointer;
-    background-color: #531139;
+    background-color: #a04509;
+    text-shadow: none;
 }
 
 footer {
     
     padding-bottom: 5rem;
 }
+h2 {
+    width: 100%;
+    text-align: center;
+    font-family: 'Syne Tactile', cursive;
+    text-shadow: 2px 2px #302f2f;
+    font-size: 45px;
+}
 /* Button */
 
 
 .my-button {
 	box-shadow: 0px 10px 14px -7px #691b4a;
-	background:linear-gradient(to bottom, #702050 5%, #732755 100%);
-	background-color:#732755;
-	border-radius:4px;
-	border:1px solid #501237;
+	background:linear-gradient(to bottom, #fe8232 5%, #eb7425 100%);
+	background-color:#fe8232;
+	border-radius:12px;
+	border:1px solid #ee7a2c;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-    font-family: 'Syne Tactile', cursive;
 	font-size:18px;
 	font-weight:bold;
-	padding:16px 32px;
+	padding:10px 32px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #531139;
+    text-shadow:0px 1px 0px #531139;
+    transition: all 0.3s;
 }
 .my-button:hover {
-	background:linear-gradient(to bottom, #531139 5%,#531139 100%);
-	background-color:rgb(122, 5, 5);
+	background:#ca5f17;
 }
 .my-button:active {
 	position:relative;
