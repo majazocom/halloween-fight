@@ -31,6 +31,7 @@ footer {background-color: rgb(2 10 19);
 }
 main {
     margin-top: 100vh;
+    height: 80vh;
     background-color: rgb(2 10 19);
     display: flex;
     width: 100%;
