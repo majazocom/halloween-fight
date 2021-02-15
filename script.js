@@ -1,3 +1,5 @@
+let mt = document.getElementById('my-team');
+
 fighters = [
     {
         id: 0,
@@ -6,7 +8,10 @@ fighters = [
         addFighter: function() {
             //Write a function that adds your fighter to your list 
             //both in innerHTML and the empty list here
-
+            console.log('first fighter ready');
+            yourFighters.push(fighters[this.id]);
+            console.log(yourFighters);
+            mt.innerHTML += `<li id="spook${this.id}">${this.name}</li>`;
         }
     },
     {
@@ -16,6 +21,10 @@ fighters = [
         addFighter: function() {
             //Write a function that adds your fighter to your list 
             //both in innerHTML and the empty list here
+            console.log('first fighter ready');
+            yourFighters.push(fighters[this.id]);
+            console.log(yourFighters);
+            mt.innerHTML += `<li id="spook${this.id}">${this.name}</li>`;
             
         }
     },
@@ -26,6 +35,10 @@ fighters = [
         addFighter: function() {
             //Write a function that adds your fighter to your list 
             //both in innerHTML and the empty list here
+            console.log('first fighter ready');
+            yourFighters.push(fighters[this.id]);
+            console.log(yourFighters);
+            mt.innerHTML += `<li id="spook${this.id}">${this.name}</li>`;
             
         }
     },
@@ -84,10 +97,23 @@ fighters = [
 let yourFighters = [];
 
 //Del 1
-//Lägg till eventlyssnare på fighter-knapparna
-//Kalla på dess fighters objekt-metod
+let spookList = document.getElementById('spook-list');
+let listItem = spookList.getElementsByTagName('li');
 
+let addEvent = function() {
+    for(let i = 0; i < listItem.length; i++) {
+        //Lägg till eventlyssnare på fighter-knapparna
+        console.log(i);
+        document.getElementById(`spook${i}`).addEventListener('click', () => {
+            //Kalla på dess fighters objekt-metod
+            fighters[i].addFighter();
+            let element = document.getElementById(`spook${i}`);
+            element.remove();
+        });
+    }
+};
 
+addEvent();
 
 //Del 2
 //Skriv objekt-metoderna
